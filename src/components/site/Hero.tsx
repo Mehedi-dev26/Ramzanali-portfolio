@@ -18,23 +18,23 @@ import { TechOrbit, type OrbitItem } from "@/components/site/TechOrbit";
 import { rotatingWords, site } from "@/lib/site-config";
 
 const innerItems: OrbitItem[] = [
-  { label: "Photoshop", node: "Ps" },
-  { label: "Illustrator", node: "Ai" },
-  { label: "Premiere Pro", node: "Pr" },
-  { label: "After Effects", node: "Ae" },
-  { label: "Lightroom", node: "Lr" },
-  { label: "Canva", node: "Cv" },
+  { label: "Photoshop", node: "Ps", color: "#31A8FF" },
+  { label: "Illustrator", node: "Ai", color: "#FF9A00" },
+  { label: "Premiere Pro", node: "Pr", color: "#9999FF" },
+  { label: "After Effects", node: "Ae", color: "#D291FF" },
+  { label: "Lightroom", node: "Lr", color: "#5EA9F7" },
+  { label: "Canva", node: "Cv", color: "#00C4CC" },
 ];
 
 const outerItems: OrbitItem[] = [
-  { label: "YouTube", node: <Youtube className="size-4" /> },
-  { label: "Facebook", node: <Facebook className="size-4" /> },
-  { label: "Instagram", node: <Instagram className="size-4" /> },
-  { label: "TikTok", node: <Music2 className="size-4" /> },
-  { label: "CapCut", node: "Cc" },
-  { label: "Figma", node: <Figma className="size-4" /> },
-  { label: "Camera", node: <Camera className="size-4" /> },
-  { label: "Microphone", node: <Mic className="size-4" /> },
+  { label: "YouTube", node: <Youtube className="size-4" />, color: "#FF0033" },
+  { label: "Facebook", node: <Facebook className="size-4" />, color: "#1877F2" },
+  { label: "Instagram", node: <Instagram className="size-4" />, color: "#E1306C" },
+  { label: "TikTok", node: <Music2 className="size-4" />, color: "#25F4EE" },
+  { label: "CapCut", node: "Cc", color: "#00E0E0" },
+  { label: "Figma", node: <Figma className="size-4" />, color: "#F24E1E" },
+  { label: "Camera", node: <Camera className="size-4" />, color: "#22C55E" },
+  { label: "Microphone", node: <Mic className="size-4" />, color: "#FACC15" },
 ];
 
 const socials = [
@@ -84,10 +84,10 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute -top-24 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-gradient-glow blur-3xl"
       />
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
         {/* Photo */}
         <div className="order-1 flex justify-center lg:order-2">
-          <div className="relative flex aspect-square w-full max-w-[26rem] items-center justify-center">
+          <div className="relative flex aspect-square w-full max-w-[24rem] items-center justify-center lg:max-w-[34rem]">
             <div
               aria-hidden
               className="animate-float-slow absolute inset-8 rounded-full bg-gradient-primary opacity-20 blur-3xl"
@@ -100,7 +100,7 @@ export function Hero() {
               aria-hidden
               className="absolute inset-[2%] rounded-full border border-border/40"
             />
-            <div className="relative size-56 rounded-full bg-gradient-primary p-[3px] shadow-elegant sm:size-64 md:size-72 lg:size-80">
+            <div className="relative aspect-square w-[58%] rounded-full bg-gradient-primary p-[3px] shadow-elegant">
               <picture>
                 <source srcSet={site.portraitWebp} type="image/webp" />
                 <img
@@ -113,10 +113,10 @@ export function Hero() {
                 />
               </picture>
             </div>
-            <TechOrbit items={innerItems} radiusRatio={0.37} duration={34} chipSize={40} />
+            <TechOrbit items={innerItems} radiusRatio={0.38} duration={34} chipSize={40} />
             <TechOrbit
               items={outerItems}
-              radiusRatio={0.52}
+              radiusRatio={0.455}
               duration={58}
               reverse
               chipSize={46}
@@ -131,7 +131,7 @@ export function Hero() {
           </p>
           <h1
             className="font-signature mt-3 whitespace-nowrap leading-[0.9] text-gradient"
-            style={{ fontSize: "clamp(3rem, 11vw, 9rem)" }}
+            style={{ fontSize: "clamp(2.75rem, 9vw, 6.5rem)" }}
           >
             {site.name}
           </h1>
