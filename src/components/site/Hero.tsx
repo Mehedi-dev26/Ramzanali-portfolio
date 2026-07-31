@@ -158,8 +158,8 @@ export function Hero() {
             {"// hello, my name is"}
           </p>
           <h1
-            className="font-signature mt-3 whitespace-nowrap leading-[0.9] text-gradient"
-            style={{ fontSize: "clamp(2.75rem, 9vw, 6.5rem)" }}
+            className="font-signature mt-3 whitespace-nowrap pb-2 text-center leading-[1.15] text-gradient"
+            style={{ fontSize: "clamp(2.75rem, 9vw, 6.5rem)", fontWeight: 800 }}
           >
             {site.name}
           </h1>
@@ -167,7 +167,7 @@ export function Hero() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="mx-auto mt-5 h-px w-32 origin-left bg-gradient-primary lg:mx-0"
+            className="mx-auto mt-5 h-px w-32 origin-left bg-gradient-primary"
           />
           <h2 className="mt-6 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
             {site.role}
