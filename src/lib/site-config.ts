@@ -167,49 +167,76 @@ export const portfolioFilters = ["All", "Reels", "YouTube", "Design", "Branding"
 
 export const timeline = [
   {
-    year: "2018",
-    title: "First camera, first audience",
-    bnTitle: "প্রথম ক্যামেরা, প্রথম দর্শক",
-    body: "Started editing and publishing videos from a single laptop in Dhaka.",
-    bnBody: "ঢাকায় একটি ল্যাপটপ দিয়ে ভিডিও এডিট ও প্রকাশ করা শুরু।",
+    year: "2017",
+    title: "Student of the Year",
+    bnTitle: "স্টুডেন্ট অব দ্য ইয়ার",
+    body: "Awarded Student of the Year by the Upazila Parishad for debate, sport, hosting and speaking.",
+    bnBody: "বিতর্ক, খেলাধুলা, উপস্থাপনা ও বক্তৃতার জন্য উপজেলা পরিষদ থেকে ‘স্টুডেন্ট অব দ্য ইয়ার’ সম্মাননা।",
   },
   {
-    year: "2020",
+    year: "2019",
     title: "Founded Boi Brikkho",
     bnTitle: "বই বৃক্ষের যাত্রা শুরু",
-    body: "Built a reading movement that now runs across 30+ branches and campus hubs.",
-    bnBody: "একটি পাঠচক্র আন্দোলন, যা আজ ৩০+ শাখা ও ক্যাম্পাস হাবে ছড়িয়ে আছে।",
+    body: "Started a nonprofit reading movement in Dhaka that now runs 30+ branches nationwide.",
+    bnBody: "ঢাকায় শুরু হওয়া অলাভজনক পাঠচক্র আন্দোলন, যার শাখা এখন সারাদেশে ৩০+।",
   },
   {
-    year: "2022",
-    title: "The Ramjan Show launched",
-    bnTitle: "দ্য রমজান শো শুরু",
-    body: "A long-form conversation series with founders, creators and educators.",
-    bnBody: "উদ্যোক্তা, নির্মাতা ও শিক্ষকদের নিয়ে দীর্ঘ আলাপের একটি সিরিজ।",
+    year: "2022 — 2023",
+    title: "Back-to-back national recognition",
+    bnTitle: "পরপর দুই বছর জাতীয় স্বীকৃতি",
+    body: "Boi Brikkho named Best Platform for Reading Books by BoiFerry (2022) and Cholontika (2023).",
+    bnBody: "বইফেরি (২০২২) ও চলন্তিকা (২০২৩) থেকে ‘বেস্ট প্ল্যাটফর্ম ফর রিডিং বুকস’ স্বীকৃতি পায় বই বৃক্ষ।",
   },
   {
     year: "2024",
-    title: "Studio & brand partnerships",
-    bnTitle: "স্টুডিও ও ব্র্যান্ড পার্টনারশিপ",
-    body: "Producing content and campaigns for national and regional brands.",
-    bnBody: "দেশীয় ও আঞ্চলিক ব্র্যান্ডের জন্য কনটেন্ট ও ক্যাম্পেইন নির্মাণ।",
+    title: "Into the podcast studio",
+    bnTitle: "পডকাস্ট স্টুডিওতে",
+    body: "Joined Passive Journal as podcast producer and host, then launched The Ramjan Show.",
+    bnBody: "প্যাসিভ জার্নালে পডকাস্ট প্রযোজক ও হোস্ট হিসেবে যোগ, এরপর শুরু করেন ‘দ্য রমজান শো’।",
+  },
+  {
+    year: "2025 — 2026",
+    title: "Brand Lead & Communication Manager",
+    bnTitle: "ব্র্যান্ড লিড ও কমিউনিকেশন ম্যানেজার",
+    body: "Brand Lead at Axaro and Communication Manager at Lumas Creative, working with leading brands.",
+    bnBody: "আক্সারোতে ব্র্যান্ড লিড ও লুমাস ক্রিয়েটিভে কমিউনিকেশন ম্যানেজার হিসেবে দেশের শীর্ষ ব্র্যান্ডদের সঙ্গে কাজ।",
   },
 ];
 
 export const bio = {
   en: [
-    "I am a content creator, podcaster and visual storyteller based in Dhaka. For the last seven years I have been building audiences the slow, honest way — one well-made video at a time.",
-    "I host The Ramjan Show, a long-form conversation series, and I founded Boi Brikkho, a reading movement that grew into 30+ branches. Alongside that I help brands turn ideas into content people actually finish watching.",
+    "I am an entrepreneur, speaker and one of the youngest podcasters in Bangladesh. Everything I do starts from the same place: books, honest conversation, and the belief that young people build better when they read.",
+    "In 2019 I founded Boi Brikkho, a nonprofit reading movement in Dhaka. It has grown into 30+ branches across the country and active chapters in 15+ universities, and has twice been named the best reading platform in Bangladesh.",
+    "In 2024 I stepped behind the microphone — producing and hosting for Passive Journal, and launching The Ramjan Show, a long-form series of unfiltered conversations about struggle, growth and media. Alongside that I lead brand storytelling as Brand Lead at Axaro and Communication Manager at Lumas Creative.",
   ],
   bn: [
-    "আমি ঢাকাভিত্তিক একজন কনটেন্ট ক্রিয়েটর, পডকাস্টার এবং ভিজ্যুয়াল স্টোরিটেলার। গত সাত বছর ধরে একটি করে ভালো ভিডিও বানিয়ে দর্শক তৈরি করছি।",
-    "আমি ‘দ্য রমজান শো’ উপস্থাপনা করি এবং ‘বই বৃক্ষ’ নামের পাঠচক্র আন্দোলনের প্রতিষ্ঠাতা, যা এখন ৩০+ শাখায় বিস্তৃত। পাশাপাশি ব্র্যান্ডদের গল্পকে দর্শকপ্রিয় কনটেন্টে রূপ দিই।",
+    "আমি একজন উদ্যোক্তা, বক্তা এবং বাংলাদেশের অন্যতম তরুণ পডকাস্টার। আমার সব কাজের শুরু একই জায়গা থেকে — বই, সৎ আলাপ, আর এই বিশ্বাস যে পড়ুয়া তরুণরাই ভালো কিছু গড়ে।",
+    "২০১৯ সালে ঢাকায় শুরু করি ‘বই বৃক্ষ’ — একটি অলাভজনক পাঠচক্র আন্দোলন। আজ এর ৩০+ শাখা এবং ১৫+ বিশ্ববিদ্যালয়ে সক্রিয় চ্যাপ্টার রয়েছে, আর দুইবার দেশের সেরা পাঠ প্ল্যাটফর্মের স্বীকৃতি পেয়েছে।",
+    "২০২৪ সালে মাইক্রোফোনের সামনে আসি — প্যাসিভ জার্নালের পডকাস্ট প্রযোজনা ও উপস্থাপনা, এবং শুরু করি ‘দ্য রমজান শো’। পাশাপাশি আক্সারোর ব্র্যান্ড লিড ও লুমাস ক্রিয়েটিভের কমিউনিকেশন ম্যানেজার হিসেবে ব্র্যান্ডদের গল্প বলি।",
   ],
 };
 
 export const personalInfo = [
   { label: "Name", bnLabel: "নাম", value: "Ramjan Ali Emon", bnValue: "রমজান আলী ইমন" },
   { label: "Based in", bnLabel: "অবস্থান", value: "Dhaka, Bangladesh", bnValue: "ঢাকা, বাংলাদেশ" },
-  { label: "Focus", bnLabel: "কাজের ক্ষেত্র", value: "Podcast & Content", bnValue: "পডকাস্ট ও কনটেন্ট" },
+  {
+    label: "Roles",
+    bnLabel: "ভূমিকা",
+    value: "Founder · Podcaster · Speaker",
+    bnValue: "প্রতিষ্ঠাতা · পডকাস্টার · বক্তা",
+  },
+  {
+    label: "Education",
+    bnLabel: "শিক্ষা",
+    value: "Dhaka College, Fine Arts",
+    bnValue: "ঢাকা কলেজ, চারুকলা",
+  },
   { label: "Languages", bnLabel: "ভাষা", value: "Bangla, English", bnValue: "বাংলা, ইংরেজি" },
+  {
+    label: "Recognition",
+    bnLabel: "স্বীকৃতি",
+    value: "3 national awards",
+    bnValue: "৩টি জাতীয় সম্মাননা",
+  },
 ];
+
