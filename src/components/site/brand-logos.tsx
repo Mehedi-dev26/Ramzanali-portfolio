@@ -9,7 +9,7 @@ import {
 type SimpleIconLike = { title: string; path: string; hex: string };
 
 /** Renders an official simple-icons glyph as an inline SVG. */
-export function SiGlyph({ icon, size = 18 }: { icon: SimpleIconLike; size?: number }) {
+export function SiGlyph({ icon, size = 17 }: { icon: SimpleIconLike; size?: number }) {
   return (
     <svg
       role="img"
@@ -24,13 +24,10 @@ export function SiGlyph({ icon, size = 18 }: { icon: SimpleIconLike; size?: numb
   );
 }
 
-/** Adobe app tiles: dark navy square with the app's brand-colored monogram. */
-export function AdobeMark({ label, tone }: { label: string; tone: string }) {
+/** Two-letter monogram tile used for Adobe / editing apps. */
+export function AdobeMark({ label }: { label: string }) {
   return (
-    <span
-      className="font-display text-[13px] font-bold leading-none tracking-tight"
-      style={{ color: tone }}
-    >
+    <span className="font-display text-[12px] font-bold leading-none tracking-tight">
       {label}
     </span>
   );
