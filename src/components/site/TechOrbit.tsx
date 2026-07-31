@@ -1,7 +1,14 @@
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-export type OrbitItem = { label: string; node: ReactNode; color?: string };
+export type OrbitItem = {
+  label: string;
+  node: ReactNode;
+  /** Authentic brand background color */
+  bg?: string;
+  /** Authentic brand glyph color */
+  fg?: string;
+};
 
 type Props = {
   items: OrbitItem[];
@@ -57,8 +64,11 @@ export function TechOrbit({
                 }}
               >
                 <motion.div
-                  className="glass pointer-events-auto flex size-full items-center justify-center rounded-full text-[10px] font-bold shadow-elegant transition-transform duration-300 hover:scale-110 hover:shadow-glow"
-                  style={{ color: item.color ?? "inherit" }}
+                  className="pointer-events-auto flex size-full items-center justify-center overflow-hidden rounded-[28%] text-[11px] font-bold shadow-elegant ring-1 ring-black/10 transition-transform duration-300 hover:scale-110 hover:shadow-glow"
+                  style={{
+                    background: item.bg ?? "var(--card)",
+                    color: item.fg ?? "var(--foreground)",
+                  }}
                   title={item.label}
                   animate={reduced ? {} : { rotate: reverse ? 360 : -360 }}
                   transition={{ duration, ease: "linear", repeat: Infinity }}
