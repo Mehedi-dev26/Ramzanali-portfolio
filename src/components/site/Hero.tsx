@@ -19,11 +19,11 @@ import { TechOrbit, type OrbitItem } from "@/components/site/TechOrbit";
 import { rotatingWords, site } from "@/lib/site-config";
 
 const innerItems: OrbitItem[] = [
-  { label: "Adobe Photoshop", node: <AdobeMark label="Ps" />, bg: "#001E36", fg: "#31A8FF" },
-  { label: "Adobe Illustrator", node: <AdobeMark label="Ai" />, bg: "#330000", fg: "#FF9A00" },
-  { label: "Adobe Premiere Pro", node: <AdobeMark label="Pr" />, bg: "#2A0634", fg: "#9999FF" },
-  { label: "Adobe After Effects", node: <AdobeMark label="Ae" />, bg: "#1D0A32", fg: "#D291FF" },
-  { label: "Adobe Lightroom", node: <AdobeMark label="Lr" />, bg: "#001E36", fg: "#8FD3FE" },
+  { label: "Adobe Photoshop", node: <AdobeMark label="Ps" />, bg: "linear-gradient(150deg, #0B3B5E 0%, #001E36 100%)", fg: "#31A8FF" },
+  { label: "Adobe Illustrator", node: <AdobeMark label="Ai" />, bg: "linear-gradient(150deg, #4A0F00 0%, #330000 100%)", fg: "#FF9A00" },
+  { label: "Adobe Premiere Pro", node: <AdobeMark label="Pr" />, bg: "linear-gradient(150deg, #3E1050 0%, #2A0634 100%)", fg: "#9999FF" },
+  { label: "Adobe After Effects", node: <AdobeMark label="Ae" />, bg: "linear-gradient(150deg, #2C1150 0%, #1D0A32 100%)", fg: "#D291FF" },
+  { label: "Adobe Lightroom", node: <AdobeMark label="Lr" />, bg: "linear-gradient(150deg, #0B3B5E 0%, #001E36 100%)", fg: "#8FD3FE" },
   {
     label: "Canva",
     node: <AdobeMark label="Cv" />,
@@ -33,25 +33,56 @@ const innerItems: OrbitItem[] = [
 ];
 
 const outerItems: OrbitItem[] = [
-  { label: "YouTube", node: <SiGlyph icon={brand.youtube} />, bg: "#FF0000", fg: "#FFFFFF" },
-  { label: "Facebook", node: <SiGlyph icon={brand.facebook} />, bg: "#1877F2", fg: "#FFFFFF" },
   {
-    label: "Instagram",
-    node: <SiGlyph icon={brand.instagram} />,
-    bg: "radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%)",
+    label: "YouTube",
+    node: <SiGlyph icon={brand.youtube} size={19} />,
+    bg: "linear-gradient(160deg, #FF3D3D 0%, #E60000 55%, #C40000 100%)",
     fg: "#FFFFFF",
   },
-  { label: "TikTok", node: <SiGlyph icon={brand.tiktok} />, bg: "#010101", fg: "#FFFFFF" },
-  { label: "CapCut", node: <AdobeMark label="Cc" />, bg: "#000000", fg: "#FFFFFF" },
+  {
+    label: "Facebook",
+    node: <SiGlyph icon={brand.facebook} size={19} />,
+    bg: "radial-gradient(circle at 30% 25%, #3B9BFF 0%, #1877F2 45%, #0A54C9 100%)",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "Instagram",
+    node: <SiGlyph icon={brand.instagram} size={19} />,
+    bg: "radial-gradient(circle at 28% 108%, #FFD86B 0%, #FC6B3F 30%, #F5296F 58%, #B02BD6 80%, #5B51D8 100%)",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "TikTok",
+    node: <SiGlyph icon={brand.tiktok} size={18} />,
+    bg: "linear-gradient(160deg, #2A2036 0%, #120C1A 100%)",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "CapCut",
+    node: <AdobeMark label="Cc" />,
+    bg: "linear-gradient(160deg, #2A2036 0%, #0A0A0A 100%)",
+    fg: "#FFFFFF",
+  },
   {
     label: "Figma",
-    node: <SiGlyph icon={brand.figma} />,
+    node: <SiGlyph icon={brand.figma} size={18} />,
     bg: "linear-gradient(160deg, #F24E1E 0%, #A259FF 55%, #1ABCFE 100%)",
     fg: "#FFFFFF",
   },
-  { label: "Camera", node: <Camera className="size-4" />, bg: "#111827", fg: "#A3E635" },
-  { label: "Microphone", node: <Mic className="size-4" />, bg: "#111827", fg: "#FACC15" },
+  {
+    label: "Camera",
+    node: <Camera className="size-[18px]" />,
+    bg: "linear-gradient(160deg, #3E4A5C 0%, #111827 100%)",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "Microphone",
+    node: <Mic className="size-[18px]" />,
+    bg: "linear-gradient(160deg, #5B4B1F 0%, #1C1608 100%)",
+    fg: "#FFD84D",
+  },
 ];
+
 
 
 
