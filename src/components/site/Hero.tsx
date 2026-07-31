@@ -14,27 +14,83 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { AdobeMark, SiGlyph, brand } from "@/components/site/brand-logos";
 import { TechOrbit, type OrbitItem } from "@/components/site/TechOrbit";
 import { rotatingWords, site } from "@/lib/site-config";
 
 const innerItems: OrbitItem[] = [
-  { label: "Photoshop", node: "Ps", color: "#31A8FF" },
-  { label: "Illustrator", node: "Ai", color: "#FF9A00" },
-  { label: "Premiere Pro", node: "Pr", color: "#9999FF" },
-  { label: "After Effects", node: "Ae", color: "#D291FF" },
-  { label: "Lightroom", node: "Lr", color: "#5EA9F7" },
-  { label: "Canva", node: "Cv", color: "#00C4CC" },
+  {
+    label: "Adobe Photoshop",
+    node: <AdobeMark label="Ps" tone="#31A8FF" />,
+    bg: "#001E36",
+    fg: "#31A8FF",
+  },
+  {
+    label: "Adobe Illustrator",
+    node: <AdobeMark label="Ai" tone="#FF9A00" />,
+    bg: "#330000",
+    fg: "#FF9A00",
+  },
+  {
+    label: "Adobe Premiere Pro",
+    node: <AdobeMark label="Pr" tone="#9999FF" />,
+    bg: "#00005B",
+    fg: "#9999FF",
+  },
+  {
+    label: "Adobe After Effects",
+    node: <AdobeMark label="Ae" tone="#D291FF" />,
+    bg: "#1F0033",
+    fg: "#D291FF",
+  },
+  {
+    label: "Adobe Lightroom",
+    node: <AdobeMark label="Lr" tone="#8FD3FE" />,
+    bg: "#001E36",
+    fg: "#8FD3FE",
+  },
+  {
+    label: "Canva",
+    node: <AdobeMark label="Cv" tone="#FFFFFF" />,
+    bg: "#00C4CC",
+    fg: "#FFFFFF",
+  },
 ];
 
 const outerItems: OrbitItem[] = [
-  { label: "YouTube", node: <Youtube className="size-4" />, color: "#FF0033" },
-  { label: "Facebook", node: <Facebook className="size-4" />, color: "#1877F2" },
-  { label: "Instagram", node: <Instagram className="size-4" />, color: "#E1306C" },
-  { label: "TikTok", node: <Music2 className="size-4" />, color: "#25F4EE" },
-  { label: "CapCut", node: "Cc", color: "#00E0E0" },
-  { label: "Figma", node: <Figma className="size-4" />, color: "#F24E1E" },
-  { label: "Camera", node: <Camera className="size-4" />, color: "#22C55E" },
-  { label: "Microphone", node: <Mic className="size-4" />, color: "#FACC15" },
+  { label: "YouTube", node: <SiGlyph icon={brand.youtube} />, bg: "#FF0000", fg: "#FFFFFF" },
+  {
+    label: "Facebook",
+    node: <SiGlyph icon={brand.facebook} />,
+    bg: "#0866FF",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "Instagram",
+    node: <SiGlyph icon={brand.instagram} />,
+    bg: "linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)",
+    fg: "#FFFFFF",
+  },
+  { label: "TikTok", node: <SiGlyph icon={brand.tiktok} />, bg: "#000000", fg: "#FFFFFF" },
+  {
+    label: "CapCut",
+    node: <AdobeMark label="Cc" tone="#FFFFFF" />,
+    bg: "#000000",
+    fg: "#FFFFFF",
+  },
+  { label: "Figma", node: <SiGlyph icon={brand.figma} />, bg: "#1E1E1E", fg: "#F24E1E" },
+  {
+    label: "Camera",
+    node: <Camera className="size-4" />,
+    bg: "#111827",
+    fg: "#FFFFFF",
+  },
+  {
+    label: "Microphone",
+    node: <Mic className="size-4" />,
+    bg: "#111827",
+    fg: "#FACC15",
+  },
 ];
 
 const socials = [
@@ -87,7 +143,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
         {/* Photo */}
         <div className="order-1 flex justify-center lg:order-2">
-          <div className="relative flex aspect-square w-full max-w-[24rem] items-center justify-center lg:max-w-[34rem]">
+          <div className="relative flex aspect-square w-full max-w-[24rem] items-center justify-center lg:max-w-[33rem]">
             <div
               aria-hidden
               className="animate-float-slow absolute inset-8 rounded-full bg-gradient-primary opacity-20 blur-3xl"
@@ -100,7 +156,7 @@ export function Hero() {
               aria-hidden
               className="absolute inset-[2%] rounded-full border border-border/40"
             />
-            <div className="relative aspect-square w-[58%] rounded-full bg-gradient-primary p-[3px] shadow-elegant">
+            <div className="relative aspect-square w-[54%] rounded-full bg-gradient-primary p-[3px] shadow-elegant">
               <picture>
                 <source srcSet={site.portraitWebp} type="image/webp" />
                 <img
@@ -113,10 +169,10 @@ export function Hero() {
                 />
               </picture>
             </div>
-            <TechOrbit items={innerItems} radiusRatio={0.38} duration={34} chipSize={40} />
+            <TechOrbit items={innerItems} radiusRatio={0.355} duration={34} chipSize={40} />
             <TechOrbit
               items={outerItems}
-              radiusRatio={0.455}
+              radiusRatio={0.475}
               duration={58}
               reverse
               chipSize={46}
