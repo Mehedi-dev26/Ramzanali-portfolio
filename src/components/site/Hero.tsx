@@ -167,9 +167,11 @@ export function Hero() {
             <RotatingWord />
           </div>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg lg:mx-0">
-            I host The Ramjan Show, founded the Boi Brikkho reading movement, and build
-            video-first content for brands that want to be watched, not skipped.
+            I founded Boi Brikkho, a reading movement now running in 30+ branches, and I host
+            The Ramjan Show — honest, long-form conversations with the people building
+            Bangladesh.
           </p>
+
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <Link
               to="/portfolio"

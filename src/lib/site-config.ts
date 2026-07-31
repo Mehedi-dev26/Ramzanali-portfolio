@@ -11,8 +11,9 @@ export const site = {
   name: "Ramjan Ali Emon",
   shortName: "Emon",
   initials: "RE",
-  role: "Content Creator & Visual Storyteller",
-  tagline: "Podcaster, founder and brand storyteller from Dhaka, Bangladesh.",
+  role: "Entrepreneur · Podcaster · Speaker",
+  tagline: "Founder of Boi Brikkho and host of The Ramjan Show, from Dhaka, Bangladesh.",
+
   brand: "Boi Brikkho",
   email: "hello@theramjanshow.com",
   location: "Dhaka, Bangladesh",
