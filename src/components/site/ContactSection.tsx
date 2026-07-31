@@ -75,11 +75,11 @@ export function ContactSection() {
               name="message"
               rows={5}
               placeholder="What are we making together?"
-              aria-invalid={Boolean(errors.message)}
+              aria-invalid={Boolean(errors['message'])}
               className="mt-2 w-full rounded-xl border border-input bg-background/60 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
             />
-            {errors.message ? (
-              <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+            {errors['message'] ? (
+              <p className="mt-1 text-xs text-destructive">{errors['message']}</p>
             ) : null}
           </div>
         </div>
