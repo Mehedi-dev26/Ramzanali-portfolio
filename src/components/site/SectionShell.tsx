@@ -43,7 +43,7 @@ export function SectionShell({
     >
       <motion.div
         aria-hidden
-        style={reduced ? undefined : { x: blobX, y: blobY }}
+        style={reduced ? {} : { x: blobX, y: blobY }}
         className="pointer-events-none absolute left-1/2 top-1/3 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-gradient-glow opacity-70 blur-3xl"
       />
       <div className="relative mx-auto max-w-7xl px-6">
