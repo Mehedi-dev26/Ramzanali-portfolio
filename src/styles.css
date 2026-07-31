@@ -50,73 +50,73 @@
 :root {
   --radius: 0.75rem;
 
-  --accent-1: oklch(0.72 0.19 32);
-  --accent-2: oklch(0.6 0.25 340);
+  --accent-1: oklch(0.62 0.15 152);
+  --accent-2: oklch(0.79 0.18 128);
 
-  --background: oklch(0.985 0.005 60);
-  --foreground: oklch(0.17 0.02 300);
+  --background: oklch(0.985 0.006 140);
+  --foreground: oklch(0.18 0.02 160);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.17 0.02 300);
+  --card-foreground: oklch(0.18 0.02 160);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.17 0.02 300);
-  --primary: oklch(0.64 0.21 20);
-  --primary-foreground: oklch(0.99 0.005 60);
-  --secondary: oklch(0.955 0.01 40);
-  --secondary-foreground: oklch(0.24 0.02 300);
-  --muted: oklch(0.955 0.008 60);
-  --muted-foreground: oklch(0.5 0.02 300);
-  --accent: oklch(0.94 0.03 340);
-  --accent-foreground: oklch(0.24 0.05 340);
+  --popover-foreground: oklch(0.18 0.02 160);
+  --primary: oklch(0.55 0.14 152);
+  --primary-foreground: oklch(0.99 0.01 140);
+  --secondary: oklch(0.955 0.014 145);
+  --secondary-foreground: oklch(0.24 0.03 160);
+  --muted: oklch(0.955 0.012 145);
+  --muted-foreground: oklch(0.5 0.02 160);
+  --accent: oklch(0.93 0.05 145);
+  --accent-foreground: oklch(0.26 0.06 155);
   --destructive: oklch(0.58 0.23 27);
   --destructive-foreground: oklch(0.99 0.005 60);
-  --border: oklch(0.9 0.01 320);
-  --input: oklch(0.9 0.01 320);
-  --ring: oklch(0.64 0.21 20);
-  --glow: oklch(0.72 0.19 32);
+  --border: oklch(0.9 0.015 150);
+  --input: oklch(0.9 0.015 150);
+  --ring: oklch(0.55 0.14 152);
+  --glow: oklch(0.62 0.15 152);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.19 32), oklch(0.6 0.25 340));
+  --gradient-primary: linear-gradient(135deg, oklch(0.55 0.14 152), oklch(0.79 0.18 128));
   --gradient-glow: radial-gradient(
     circle at 50% 50%,
-    oklch(0.72 0.19 32 / 28%),
+    oklch(0.62 0.15 152 / 28%),
     transparent 70%
   );
-  --shadow-glow: 0 0 40px oklch(0.72 0.19 32 / 35%);
-  --shadow-elegant: 0 20px 60px -20px oklch(0.6 0.25 340 / 40%);
+  --shadow-glow: 0 0 40px oklch(0.62 0.15 152 / 35%);
+  --shadow-elegant: 0 20px 60px -20px oklch(0.5 0.12 155 / 40%);
 }
 
 .dark {
-  --accent-1: oklch(0.78 0.17 40);
-  --accent-2: oklch(0.7 0.23 340);
+  --accent-1: oklch(0.75 0.16 150);
+  --accent-2: oklch(0.86 0.18 128);
 
-  --background: oklch(0.16 0.015 290);
-  --foreground: oklch(0.97 0.005 60);
-  --card: oklch(0.21 0.018 290);
-  --card-foreground: oklch(0.97 0.005 60);
-  --popover: oklch(0.21 0.018 290);
-  --popover-foreground: oklch(0.97 0.005 60);
-  --primary: oklch(0.78 0.17 40);
-  --primary-foreground: oklch(0.18 0.02 290);
-  --secondary: oklch(0.26 0.02 290);
-  --secondary-foreground: oklch(0.97 0.005 60);
-  --muted: oklch(0.26 0.02 290);
-  --muted-foreground: oklch(0.73 0.015 290);
-  --accent: oklch(0.3 0.05 340);
-  --accent-foreground: oklch(0.97 0.005 60);
+  --background: oklch(0.16 0.018 165);
+  --foreground: oklch(0.97 0.008 140);
+  --card: oklch(0.21 0.022 165);
+  --card-foreground: oklch(0.97 0.008 140);
+  --popover: oklch(0.21 0.022 165);
+  --popover-foreground: oklch(0.97 0.008 140);
+  --primary: oklch(0.78 0.16 150);
+  --primary-foreground: oklch(0.18 0.03 160);
+  --secondary: oklch(0.26 0.025 165);
+  --secondary-foreground: oklch(0.97 0.008 140);
+  --muted: oklch(0.26 0.025 165);
+  --muted-foreground: oklch(0.74 0.02 155);
+  --accent: oklch(0.3 0.06 150);
+  --accent-foreground: oklch(0.97 0.008 140);
   --destructive: oklch(0.68 0.19 25);
   --destructive-foreground: oklch(0.98 0.005 60);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.78 0.17 40);
-  --glow: oklch(0.78 0.17 40);
+  --ring: oklch(0.78 0.16 150);
+  --glow: oklch(0.75 0.16 150);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.78 0.17 40), oklch(0.7 0.23 340));
+  --gradient-primary: linear-gradient(135deg, oklch(0.75 0.16 150), oklch(0.88 0.19 126));
   --gradient-glow: radial-gradient(
     circle at 50% 50%,
-    oklch(0.78 0.17 40 / 28%),
+    oklch(0.75 0.16 150 / 28%),
     transparent 70%
   );
-  --shadow-glow: 0 0 40px oklch(0.78 0.17 40 / 35%);
-  --shadow-elegant: 0 20px 60px -20px oklch(0.7 0.23 340 / 40%);
+  --shadow-glow: 0 0 40px oklch(0.75 0.16 150 / 35%);
+  --shadow-elegant: 0 20px 60px -20px oklch(0.6 0.14 150 / 40%);
 }
 
 @layer base {
