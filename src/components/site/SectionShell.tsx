@@ -39,7 +39,7 @@ export function SectionShell({
     <section
       id={id}
       ref={ref}
-      className={cn("relative overflow-hidden py-28 md:py-36", className)}
+      className={cn("relative overflow-hidden py-20 md:py-24", className)}
     >
       <motion.div
         aria-hidden

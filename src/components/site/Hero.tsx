@@ -126,7 +126,7 @@ function RotatingWord() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden pt-32 pb-8 md:pt-40 md:pb-10">
       <div
         aria-hidden
         className="grid-bg absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
@@ -257,7 +257,7 @@ export function Hero() {
         <HeroMarquee />
       </div>
 
-      <div className="mt-16 flex justify-center">
+      <div className="mt-8 flex justify-center">
         <ChevronDown className="size-6 animate-bounce text-muted-foreground" aria-hidden />
       </div>
     </section>

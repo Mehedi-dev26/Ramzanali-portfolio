@@ -218,17 +218,26 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-.marquee-track {
-  animation: marquee-x 38s linear infinite;
+.marquee-lane {
+  animation: marquee-x 42s linear infinite;
+  will-change: transform;
 }
 
-.marquee-track:hover {
+.marquee-lane:hover,
+.marquee-lane:focus-within {
   animation-play-state: paused;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-lane {
+    animation: none;
+  }
+}
+
 
 @keyframes app-boot {
   from {

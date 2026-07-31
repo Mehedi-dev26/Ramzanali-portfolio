@@ -13,16 +13,19 @@ const chips: Chip[] = [
   ...extras.map((e) => ({ lead: e.label, label: e.detail })),
 ];
 
-function Track() {
+function Track({ ariaHidden = false }: { ariaHidden?: boolean }) {
   return (
-    <ul className="marquee-track flex shrink-0 items-center gap-4 pr-4">
+    <ul
+      aria-hidden={ariaHidden || undefined}
+      className="flex shrink-0 items-center gap-4 pr-4"
+    >
       {chips.map((c, i) => (
         <li
           key={`${c.lead}-${i}`}
-          className="glass flex min-h-12 shrink-0 items-center gap-3 rounded-full px-5 py-2.5"
+          className="glass flex min-h-12 shrink-0 items-center gap-3 rounded-full px-5 py-2.5 transition-colors duration-300 hover:border-primary/60"
         >
           <span className="text-gradient text-base font-bold sm:text-lg">{c.lead}</span>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:text-[11px]">
+          <span className="font-mono text-[10px] whitespace-nowrap uppercase tracking-widest text-muted-foreground sm:text-[11px]">
             {c.label}
           </span>
         </li>
@@ -34,12 +37,12 @@ function Track() {
 export function HeroMarquee() {
   return (
     <div
-      className="relative mt-12 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]"
+      className="relative mt-8 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]"
       aria-label="Highlights"
     >
-      <div className="flex w-max">
+      <div className="marquee-lane flex w-max">
         <Track />
-        <Track />
+        <Track ariaHidden />
       </div>
     </div>
   );
