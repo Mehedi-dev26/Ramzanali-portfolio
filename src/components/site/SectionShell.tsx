@@ -48,9 +48,7 @@ export function SectionShell({
       />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.header
-          style={
-            reduced ? undefined : { y, rotateX, opacity, transformPerspective: 1000 }
-          }
+          style={reduced ? {} : { y, rotateX, opacity, transformPerspective: 1000 }}
           className={cn(
             "mb-14 md:mb-20",
             align === "center" ? "text-center" : "text-center md:text-left",
