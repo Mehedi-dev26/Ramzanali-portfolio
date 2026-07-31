@@ -67,7 +67,7 @@ export function SectionShell({
               </span>
             </span>
           ) : null}
-          <h2 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <h2 className="pb-2 text-4xl font-bold leading-[1.2] tracking-tight md:text-6xl lg:text-7xl">
             {title}
           </h2>
           {description ? (
