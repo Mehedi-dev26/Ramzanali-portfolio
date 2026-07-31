@@ -4,7 +4,6 @@ import {
   siInstagram,
   siTiktok,
   siFigma,
-  siCanva,
 } from "simple-icons/icons";
 
 type SimpleIconLike = { title: string; path: string; hex: string };
@@ -43,5 +42,4 @@ export const brand = {
   instagram: siInstagram as SimpleIconLike,
   tiktok: siTiktok as SimpleIconLike,
   figma: siFigma as SimpleIconLike,
-  canva: siCanva as SimpleIconLike | undefined,
 };
