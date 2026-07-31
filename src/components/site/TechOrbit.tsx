@@ -58,7 +58,7 @@ export function TechOrbit({
               >
                 <motion.div
                   className="glass pointer-events-auto flex size-full items-center justify-center rounded-full text-[10px] font-bold shadow-elegant transition-transform duration-300 hover:scale-110 hover:shadow-glow"
-                  style={item.color ? { color: item.color } : undefined}
+                  style={{ color: item.color ?? "inherit" }}
                   title={item.label}
                   animate={reduced ? {} : { rotate: reverse ? 360 : -360 }}
                   transition={{ duration, ease: "linear", repeat: Infinity }}
