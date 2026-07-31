@@ -6,10 +6,10 @@ import { usePrefs } from "@/lib/prefs";
 import { navItems, site } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
-function Toggles({ onDone }: { onDone?: () => void }) {
+function Toggles({ onDone, compact = false }: { onDone?: () => void; compact?: boolean }) {
   const { theme, toggleTheme, lang, setLang } = usePrefs();
   return (
-    <div className="flex items-center gap-3">
+    <div className={cn("flex items-center", compact ? "gap-2" : "gap-3")}>
       <div className="glass flex items-center rounded-full p-1">
         {(["en", "bn"] as const).map((l) => (
           <button
@@ -20,7 +20,8 @@ function Toggles({ onDone }: { onDone?: () => void }) {
               onDone?.();
             }}
             className={cn(
-              "min-h-9 rounded-full px-3 text-xs font-semibold transition-colors",
+              "rounded-full font-semibold transition-colors",
+              compact ? "min-h-8 px-2.5 text-[11px]" : "min-h-9 px-3 text-xs",
               l === "bn" && "font-bangla",
               lang === l
                 ? "bg-gradient-primary text-primary-foreground"
@@ -35,13 +36,17 @@ function Toggles({ onDone }: { onDone?: () => void }) {
         type="button"
         onClick={toggleTheme}
         aria-label="Toggle colour theme"
-        className="glass flex size-10 items-center justify-center rounded-full transition-colors hover:text-primary"
+        className={cn(
+          "glass flex items-center justify-center rounded-full transition-colors hover:text-primary",
+          compact ? "size-9" : "size-10",
+        )}
       >
         {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
       </button>
     </div>
   );
 }
+
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -91,15 +96,19 @@ export function Navbar() {
           <Toggles />
         </div>
 
-        <button
-          type="button"
-          className="glass flex size-11 items-center justify-center rounded-full md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <Toggles compact />
+          <button
+            type="button"
+            className="glass flex size-11 items-center justify-center rounded-full"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
+
       </nav>
 
       {open ? (

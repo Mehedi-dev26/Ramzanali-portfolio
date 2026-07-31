@@ -15,8 +15,10 @@ import {
 import { useEffect, useState } from "react";
 
 import { AdobeMark, SiGlyph, brand } from "@/components/site/brand-logos";
+import { HeroMarquee } from "@/components/site/HeroMarquee";
 import { TechOrbit, type OrbitItem } from "@/components/site/TechOrbit";
 import { rotatingWords, site } from "@/lib/site-config";
+
 
 const innerItems: OrbitItem[] = [
   { label: "Adobe Photoshop", node: <AdobeMark label="Ps" />, bg: "linear-gradient(150deg, #0B3B5E 0%, #001E36 100%)", fg: "#31A8FF" },
@@ -224,8 +226,9 @@ export function Hero() {
               to="/portfolio"
               className="inline-flex min-h-11 items-center rounded-full bg-gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform duration-300 hover:scale-105"
             >
-              View My Work
+              Explore My Journey
             </Link>
+
             <Link
               to="/contact"
               className="glass inline-flex min-h-11 items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-primary"
@@ -250,6 +253,10 @@ export function Hero() {
           </ul>
         </div>
       </div>
+      <div className="relative mx-auto max-w-7xl px-6">
+        <HeroMarquee />
+      </div>
+
       <div className="mt-16 flex justify-center">
         <ChevronDown className="size-6 animate-bounce text-muted-foreground" aria-hidden />
       </div>
