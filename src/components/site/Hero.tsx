@@ -115,14 +115,24 @@ export function Hero() {
                 />
               </picture>
             </div>
-            <TechOrbit items={innerItems} radiusRatio={0.355} duration={34} chipSize={40} />
+            <TechOrbit
+              items={innerItems}
+              radiusRatio={0.355}
+              duration={34}
+              chipRatio={0.105}
+              minChip={30}
+              maxChip={42}
+            />
             <TechOrbit
               items={outerItems}
               radiusRatio={0.475}
               duration={58}
               reverse
-              chipSize={46}
+              chipRatio={0.12}
+              minChip={34}
+              maxChip={48}
             />
+
           </div>
         </div>
 
