@@ -38,7 +38,7 @@ export function AboutContent({ withTimeline = true }: { withTimeline?: boolean }
                 >
                   {bn ? info.bnLabel : info.label}
                 </p>
-                <p className={cn("mt-2 text-sm font-semibold", bn && "font-bangla")}>
+                <p className={cn("mt-2 text-base font-extrabold tracking-tight", bn && "font-bangla")}>
                   {bn ? info.bnValue : info.value}
                 </p>
               </div>
@@ -51,7 +51,7 @@ export function AboutContent({ withTimeline = true }: { withTimeline?: boolean }
         <div>
           <h3
             className={cn(
-              "mb-8 text-2xl font-bold tracking-tight md:text-3xl",
+              "mb-8 text-3xl font-extrabold tracking-tight md:text-4xl",
               bn && "font-bangla-display",
             )}
           >
@@ -67,12 +67,13 @@ export function AboutContent({ withTimeline = true }: { withTimeline?: boolean }
                   </span>
                   <h4
                     className={cn(
-                      "mt-2 text-lg font-bold",
+                      "mt-2 text-xl font-extrabold tracking-tight md:text-2xl",
                       bn && "font-bangla-display",
                     )}
                   >
                     {bn ? item.bnTitle : item.title}
                   </h4>
+
                   <p
                     className={cn(
                       "mt-1 text-sm leading-relaxed text-muted-foreground",
