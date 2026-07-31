@@ -4,8 +4,10 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 export type OrbitItem = {
   label: string;
   node: ReactNode;
-  /** Brand accent used for the glyph, tinted tile and glow */
-  tint: string;
+  /** Official brand background (solid color or gradient) */
+  bg: string;
+  /** Glyph color on top of the brand background */
+  fg: string;
 };
 
 type Props = {
@@ -70,12 +72,13 @@ export function TechOrbit({
                 }}
               >
                 <motion.div
-                  className="pointer-events-auto relative flex size-full items-center justify-center overflow-hidden rounded-[30%] text-[11px] font-bold backdrop-blur-md transition-transform duration-300 hover:scale-110"
+                  className="pointer-events-auto relative flex size-full items-center justify-center overflow-hidden rounded-[26%] text-[11px] font-bold transition-transform duration-300 hover:scale-110"
                   style={{
-                    background: `linear-gradient(150deg, color-mix(in oklab, ${item.tint} 26%, var(--card)) 0%, color-mix(in oklab, ${item.tint} 8%, var(--card)) 55%, var(--card) 100%)`,
-                    color: item.tint,
-                    boxShadow: `inset 0 1px 0 color-mix(in oklab, ${item.tint} 45%, transparent), 0 10px 24px -12px color-mix(in oklab, ${item.tint} 70%, transparent)`,
-                    border: `1px solid color-mix(in oklab, ${item.tint} 35%, transparent)`,
+                    background: item.bg,
+                    color: item.fg,
+                    boxShadow:
+                      "inset 0 1px 0 rgb(255 255 255 / 0.35), 0 10px 22px -12px rgb(0 0 0 / 0.65)",
+                    border: "1px solid rgb(255 255 255 / 0.16)",
                   }}
                   title={item.label}
                   animate={reduced ? {} : { rotate: reverse ? 360 : -360 }}
@@ -83,10 +86,10 @@ export function TechOrbit({
                 >
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute inset-x-0 top-0 h-1/2 opacity-40"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-1/2 opacity-25"
                     style={{
                       background:
-                        "linear-gradient(180deg, color-mix(in oklab, white 26%, transparent), transparent)",
+                        "linear-gradient(180deg, rgb(255 255 255 / 0.6), transparent)",
                     }}
                   />
                   <span className="relative flex items-center justify-center">

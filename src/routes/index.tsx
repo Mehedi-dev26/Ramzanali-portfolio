@@ -42,7 +42,7 @@ function HomePage() {
         eyebrow="about me"
         title={
           <>
-            My <span className="font-signature text-gradient">Story</span>
+            <span className="font-signature"><span className="font-black">My</span> <span className="text-gradient">Story</span></span>
           </>
         }
         description="Entrepreneur, speaker and one of the youngest podcasters in Bangladesh — it all started with books."
@@ -64,7 +64,7 @@ function HomePage() {
         eyebrow="what i build"
         title={
           <>
-            My <span className="font-signature text-gradient">Ventures</span>
+            <span className="font-signature"><span className="font-black">My</span> <span className="text-gradient">Ventures</span></span>
           </>
         }
         description="A nonprofit reading movement, two podcasts and brand leadership roles — the work behind the name."
@@ -86,7 +86,7 @@ function HomePage() {
         eyebrow="selected work"
         title={
           <>
-            My <span className="font-signature text-gradient">Work</span>
+            <span className="font-signature"><span className="font-black">My</span> <span className="text-gradient">Work</span></span>
           </>
         }
         description="Episodes, reels and brand campaigns produced for audiences across Bangladesh."
@@ -99,7 +99,7 @@ function HomePage() {
         eyebrow="get in touch"
         title={
           <>
-            Let&apos;s <span className="font-signature text-gradient">Collaborate</span>
+            <span className="font-signature"><span className="font-black">Let&apos;s</span> <span className="text-gradient">Collaborate</span></span>
           </>
         }
         description="Sponsorships, podcast guesting, content production or a full channel setup — tell me what you have in mind."
