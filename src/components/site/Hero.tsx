@@ -61,7 +61,7 @@ function RotatingWord() {
   }, [reduced]);
 
   return (
-    <span className="relative block h-6 min-w-[11.5rem] overflow-hidden text-left sm:h-7">
+    <span className="relative block h-7 min-w-[15rem] overflow-hidden whitespace-nowrap text-left sm:h-8">
       <motion.span
         key={index}
         initial={{ y: 18, opacity: 0 }}
