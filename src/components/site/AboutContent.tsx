@@ -10,13 +10,22 @@ export function AboutContent({ withTimeline = true }: { withTimeline?: boolean }
   return (
     <div className="space-y-14">
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
-        <div className={cn("space-y-5", bn && "font-bangla")}>
-          {(bn ? bio.bn : bio.en).map((p) => (
-            <p key={p} className="text-base leading-relaxed text-muted-foreground md:text-lg">
+        <div className={cn("space-y-6", bn && "font-bangla")}>
+          {(bn ? bio.bn : bio.en).map((p, i) => (
+            <p
+              key={p}
+              className={cn(
+                i === 0
+                  ? "text-xl font-extrabold leading-snug tracking-tight text-foreground md:text-3xl"
+                  : "text-base font-medium leading-relaxed text-muted-foreground md:text-lg",
+                bn && i === 0 && "font-bangla-display",
+              )}
+            >
               {p}
             </p>
           ))}
         </div>
+
         <div className="grid gap-5 sm:grid-cols-2">
           {personalInfo.map((info, i) => (
             <Reveal key={info.label} index={i}>
