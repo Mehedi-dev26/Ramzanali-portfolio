@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SectionShell } from "@/components/site/SectionShell";
-import { ServiceGrid } from "@/components/site/ServiceGrid";
+import { VentureGrid } from "@/components/site/VentureGrid";
 import { site } from "@/lib/site-config";
 
-const title = `Services — ${site.name}`;
+const title = `Ventures & Roles — ${site.name}`;
 const description =
-  "Video editing, thumbnail design, motion graphics, social media management, scriptwriting and brand collaborations by Ramjan Ali Emon.";
+  "Boi Brikkho, The Ramjan Show, Passive Journal, Axaro and Lumas Creative — the ventures and roles Ramjan Ali Emon builds and leads from Dhaka.";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/ventures")({
   head: () => ({
     meta: [
       { title },
@@ -16,15 +16,15 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "/ventures" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "/ventures" }],
   }),
-  component: ServicesPage,
+  component: VenturesPage,
 });
 
-function ServicesPage() {
+function VenturesPage() {
   return (
     <>
       <section className="relative overflow-hidden pt-36 pb-12 md:pt-44 md:pb-16">
@@ -36,28 +36,28 @@ function ServicesPage() {
           <span className="glass mx-auto mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 md:mx-0">
             <span className="size-1.5 rounded-full bg-gradient-primary" />
             <span className="font-mono text-[10px] uppercase tracking-widest text-primary sm:text-xs">
-              what i do
+              what i build
             </span>
           </span>
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            My <span className="font-signature text-gradient">Services</span>
+          <h1 className="text-4xl font-extrabold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
+            My <span className="font-signature text-gradient">Ventures</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg lg:mx-0">
-            Six ways I help creators and brands publish content that keeps people watching.
+            One reading movement, two podcasts and two brands — the places where my work lives.
           </p>
         </div>
       </section>
 
       <SectionShell
-        eyebrow="the offer"
+        eyebrow="ventures & roles"
         title={
           <>
-            Full <span className="font-signature text-gradient">Production</span>
+            Built &amp; <span className="font-signature text-gradient">Leading</span>
           </>
         }
-        description="Pick a single service or hand over the whole pipeline — planning, shooting, editing, publishing and reporting."
+        description="From a nonprofit reading movement founded in 2019 to brand and podcast work with some of Bangladesh's leading names."
       >
-        <ServiceGrid />
+        <VentureGrid />
       </SectionShell>
     </>
   );

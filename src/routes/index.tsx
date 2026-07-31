@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/site/ContactSection";
 import { Hero } from "@/components/site/Hero";
 import { PortfolioGrid } from "@/components/site/PortfolioGrid";
 import { SectionShell } from "@/components/site/SectionShell";
-import { ServiceGrid } from "@/components/site/ServiceGrid";
+import { VentureGrid } from "@/components/site/VentureGrid";
 import { StatsRow } from "@/components/site/StatsRow";
 import { site } from "@/lib/site-config";
 
@@ -45,7 +45,7 @@ function HomePage() {
             My <span className="font-signature text-gradient">Story</span>
           </>
         }
-        description="A creator who cares more about the second minute of a video than the first thumbnail impression."
+        description="Entrepreneur, speaker and one of the youngest podcasters in Bangladesh — it all started with books."
       >
         <div className="space-y-14">
           <StatsRow />
@@ -60,25 +60,26 @@ function HomePage() {
       </SectionShell>
 
       <SectionShell
-        id="services"
-        eyebrow="what i do"
+        id="ventures"
+        eyebrow="what i build"
         title={
           <>
-            My <span className="font-signature text-gradient">Services</span>
+            My <span className="font-signature text-gradient">Ventures</span>
           </>
         }
-        description="From the first hook line to the final export — everything a channel or a brand needs to publish consistently."
+        description="A nonprofit reading movement, two podcasts and brand leadership roles — the work behind the name."
       >
         <div className="space-y-10">
-          <ServiceGrid limit={3} />
+          <VentureGrid limit={3} />
           <Link
-            to="/services"
+            to="/ventures"
             className="glass inline-flex min-h-11 items-center rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-primary"
           >
-            See all services
+            See all ventures
           </Link>
         </div>
       </SectionShell>
+
 
       <SectionShell
         id="portfolio"

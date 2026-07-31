@@ -4,10 +4,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 export type OrbitItem = {
   label: string;
   node: ReactNode;
-  /** Authentic brand background color */
-  bg?: string;
-  /** Authentic brand glyph color */
-  fg?: string;
+  /** Brand accent used for the glyph, tinted tile and glow */
+  tint: string;
 };
 
 type Props = {
@@ -15,7 +13,10 @@ type Props = {
   radiusRatio?: number;
   duration?: number;
   reverse?: boolean;
-  chipSize?: number;
+  /** Chip size as a ratio of the container width — keeps mobile in proportion */
+  chipRatio?: number;
+  minChip?: number;
+  maxChip?: number;
 };
 
 export function TechOrbit({
@@ -23,21 +24,26 @@ export function TechOrbit({
   radiusRatio = 0.4,
   duration = 40,
   reverse = false,
-  chipSize = 40,
+  chipRatio = 0.11,
+  minChip = 30,
+  maxChip = 46,
 }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [radius, setRadius] = useState(0);
+  const [width, setWidth] = useState(0);
   const reduced = useReducedMotion();
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const update = () => setRadius(el.clientWidth * radiusRatio);
+    const update = () => setWidth(el.clientWidth);
     update();
     const ro = new ResizeObserver(update);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [radiusRatio]);
+  }, []);
+
+  const radius = width * radiusRatio;
+  const chipSize = Math.min(maxChip, Math.max(minChip, width * chipRatio));
 
   return (
     <div ref={ref} aria-hidden className="pointer-events-none absolute inset-0">
@@ -64,16 +70,28 @@ export function TechOrbit({
                 }}
               >
                 <motion.div
-                  className="pointer-events-auto flex size-full items-center justify-center overflow-hidden rounded-[28%] text-[11px] font-bold shadow-elegant ring-1 ring-black/10 transition-transform duration-300 hover:scale-110 hover:shadow-glow"
+                  className="pointer-events-auto relative flex size-full items-center justify-center overflow-hidden rounded-[30%] text-[11px] font-bold backdrop-blur-md transition-transform duration-300 hover:scale-110"
                   style={{
-                    background: item.bg ?? "var(--card)",
-                    color: item.fg ?? "var(--foreground)",
+                    background: `linear-gradient(150deg, color-mix(in oklab, ${item.tint} 26%, var(--card)) 0%, color-mix(in oklab, ${item.tint} 8%, var(--card)) 55%, var(--card) 100%)`,
+                    color: item.tint,
+                    boxShadow: `inset 0 1px 0 color-mix(in oklab, ${item.tint} 45%, transparent), 0 10px 24px -12px color-mix(in oklab, ${item.tint} 70%, transparent)`,
+                    border: `1px solid color-mix(in oklab, ${item.tint} 35%, transparent)`,
                   }}
                   title={item.label}
                   animate={reduced ? {} : { rotate: reverse ? 360 : -360 }}
                   transition={{ duration, ease: "linear", repeat: Infinity }}
                 >
-                  {item.node}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-x-0 top-0 h-1/2 opacity-40"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, color-mix(in oklab, white 26%, transparent), transparent)",
+                    }}
+                  />
+                  <span className="relative flex items-center justify-center">
+                    {item.node}
+                  </span>
                 </motion.div>
               </motion.div>
             );

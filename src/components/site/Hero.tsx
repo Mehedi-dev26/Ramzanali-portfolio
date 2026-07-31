@@ -19,79 +19,25 @@ import { TechOrbit, type OrbitItem } from "@/components/site/TechOrbit";
 import { rotatingWords, site } from "@/lib/site-config";
 
 const innerItems: OrbitItem[] = [
-  {
-    label: "Adobe Photoshop",
-    node: <AdobeMark label="Ps" tone="#31A8FF" />,
-    bg: "#001E36",
-    fg: "#31A8FF",
-  },
-  {
-    label: "Adobe Illustrator",
-    node: <AdobeMark label="Ai" tone="#FF9A00" />,
-    bg: "#330000",
-    fg: "#FF9A00",
-  },
-  {
-    label: "Adobe Premiere Pro",
-    node: <AdobeMark label="Pr" tone="#9999FF" />,
-    bg: "#00005B",
-    fg: "#9999FF",
-  },
-  {
-    label: "Adobe After Effects",
-    node: <AdobeMark label="Ae" tone="#D291FF" />,
-    bg: "#1F0033",
-    fg: "#D291FF",
-  },
-  {
-    label: "Adobe Lightroom",
-    node: <AdobeMark label="Lr" tone="#8FD3FE" />,
-    bg: "#001E36",
-    fg: "#8FD3FE",
-  },
-  {
-    label: "Canva",
-    node: <AdobeMark label="Cv" tone="#FFFFFF" />,
-    bg: "#00C4CC",
-    fg: "#FFFFFF",
-  },
+  { label: "Adobe Photoshop", node: <AdobeMark label="Ps" />, tint: "#31A8FF" },
+  { label: "Adobe Illustrator", node: <AdobeMark label="Ai" />, tint: "#FF9A00" },
+  { label: "Adobe Premiere Pro", node: <AdobeMark label="Pr" />, tint: "#9999FF" },
+  { label: "Adobe After Effects", node: <AdobeMark label="Ae" />, tint: "#D291FF" },
+  { label: "Adobe Lightroom", node: <AdobeMark label="Lr" />, tint: "#8FD3FE" },
+  { label: "Canva", node: <AdobeMark label="Cv" />, tint: "#00C4CC" },
 ];
 
 const outerItems: OrbitItem[] = [
-  { label: "YouTube", node: <SiGlyph icon={brand.youtube} />, bg: "#FF0000", fg: "#FFFFFF" },
-  {
-    label: "Facebook",
-    node: <SiGlyph icon={brand.facebook} />,
-    bg: "#0866FF",
-    fg: "#FFFFFF",
-  },
-  {
-    label: "Instagram",
-    node: <SiGlyph icon={brand.instagram} />,
-    bg: "linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)",
-    fg: "#FFFFFF",
-  },
-  { label: "TikTok", node: <SiGlyph icon={brand.tiktok} />, bg: "#000000", fg: "#FFFFFF" },
-  {
-    label: "CapCut",
-    node: <AdobeMark label="Cc" tone="#FFFFFF" />,
-    bg: "#000000",
-    fg: "#FFFFFF",
-  },
-  { label: "Figma", node: <SiGlyph icon={brand.figma} />, bg: "#1E1E1E", fg: "#F24E1E" },
-  {
-    label: "Camera",
-    node: <Camera className="size-4" />,
-    bg: "#111827",
-    fg: "#FFFFFF",
-  },
-  {
-    label: "Microphone",
-    node: <Mic className="size-4" />,
-    bg: "#111827",
-    fg: "#FACC15",
-  },
+  { label: "YouTube", node: <SiGlyph icon={brand.youtube} />, tint: "#FF3B30" },
+  { label: "Facebook", node: <SiGlyph icon={brand.facebook} />, tint: "#3B82F6" },
+  { label: "Instagram", node: <SiGlyph icon={brand.instagram} />, tint: "#E1466E" },
+  { label: "TikTok", node: <SiGlyph icon={brand.tiktok} />, tint: "#25F4EE" },
+  { label: "CapCut", node: <AdobeMark label="Cc" />, tint: "#F5F5F5" },
+  { label: "Figma", node: <SiGlyph icon={brand.figma} />, tint: "#F24E1E" },
+  { label: "Camera", node: <Camera className="size-4" />, tint: "#A3E635" },
+  { label: "Microphone", node: <Mic className="size-4" />, tint: "#FACC15" },
 ];
+
 
 const socials = [
   { href: site.links.youtube, label: "YouTube", Icon: Youtube },
@@ -115,7 +61,7 @@ function RotatingWord() {
   }, [reduced]);
 
   return (
-    <span className="relative block h-6 min-w-[11.5rem] overflow-hidden text-left sm:h-7">
+    <span className="relative block h-7 min-w-[15rem] overflow-hidden whitespace-nowrap text-left sm:h-8">
       <motion.span
         key={index}
         initial={{ y: 18, opacity: 0 }}
@@ -169,14 +115,24 @@ export function Hero() {
                 />
               </picture>
             </div>
-            <TechOrbit items={innerItems} radiusRatio={0.355} duration={34} chipSize={40} />
+            <TechOrbit
+              items={innerItems}
+              radiusRatio={0.355}
+              duration={34}
+              chipRatio={0.105}
+              minChip={30}
+              maxChip={42}
+            />
             <TechOrbit
               items={outerItems}
               radiusRatio={0.475}
               duration={58}
               reverse
-              chipSize={46}
+              chipRatio={0.12}
+              minChip={34}
+              maxChip={48}
             />
+
           </div>
         </div>
 
@@ -211,9 +167,11 @@ export function Hero() {
             <RotatingWord />
           </div>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg lg:mx-0">
-            I host The Ramjan Show, founded the Boi Brikkho reading movement, and build
-            video-first content for brands that want to be watched, not skipped.
+            I founded Boi Brikkho, a reading movement now running in 30+ branches, and I host
+            The Ramjan Show — honest, long-form conversations with the people building
+            Bangladesh.
           </p>
+
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <Link
               to="/portfolio"
