@@ -31,64 +31,92 @@ export const site = {
 export const navItems = [
   { to: "/", label: "Home", bn: "হোম" },
   { to: "/about", label: "About", bn: "পরিচিতি" },
-  { to: "/services", label: "Services", bn: "সেবা" },
+  { to: "/ventures", label: "Ventures", bn: "উদ্যোগ" },
   { to: "/portfolio", label: "Portfolio", bn: "পোর্টফোলিও" },
   { to: "/contact", label: "Contact", bn: "যোগাযোগ" },
 ] as const;
 
 export const rotatingWords = [
-  "editing reels",
-  "designing thumbnails",
-  "scripting videos",
-  "growing brands",
-  "shooting content",
+  "hosting The Ramjan Show",
+  "growing Boi Brikkho",
+  "leading brand stories",
+  "speaking on stage",
+  "reading a new book",
 ];
 
 export const stats = [
-  { value: 120, suffix: "K+", label: "Subscribers" },
-  { value: 340, suffix: "+", label: "Videos Produced" },
-  { value: 45, suffix: "+", label: "Brands & Clients" },
-  { value: 7, suffix: "+", label: "Years Creating" },
+  { value: 30, suffix: "+", label: "Boi Brikkho Branches" },
+  { value: 15, suffix: "+", label: "University Chapters" },
+  { value: 100, suffix: "+", label: "Podcast Conversations" },
+  { value: 6, suffix: "+", label: "Years Building" },
 ];
 
-export const services = [
+/** Ventures, roles and platforms — this is a personal portfolio, not a service menu. */
+export const ventures = [
   {
-    title: "Video Editing",
-    icon: "clapperboard",
-    description: "Story-first edits for long-form YouTube and short-form reels that hold attention.",
-    points: ["Retention-driven cuts", "Colour grade & sound mix", "Subtitles and captions"],
+    title: "Boi Brikkho",
+    role: "Founder & CEO",
+    period: "2019 — Present",
+    icon: "sprout",
+    description:
+      "A nonprofit reading movement started in 2019 that grew into 30+ branches across Bangladesh and 15+ university chapters.",
+    points: [
+      "Best Platform for Reading Books — BoiFerry, 2022",
+      "Best Platform for Reading Books — Cholontika, 2023",
+      "Book exchanges, reading circles and campus programmes",
+    ],
   },
   {
-    title: "Thumbnail Design",
-    icon: "image",
-    description: "Click-worthy thumbnails engineered around contrast, faces and curiosity gaps.",
-    points: ["A/B ready variants", "Bangla & English typography", "CTR-focused composition"],
+    title: "The Ramjan Show",
+    role: "Host & Podcaster",
+    period: "2024 — Present",
+    icon: "mic",
+    description:
+      "Long-form, unfiltered conversations about struggle, growth and media — built to bring real stories forward.",
+    points: [
+      "One of Bangladesh's youngest podcasters",
+      "Guests from business, media and education",
+      "Listeners across Bangladesh and the Middle East",
+    ],
   },
   {
-    title: "Motion Graphics",
-    icon: "sparkles",
-    description: "Animated titles, lower thirds and transitions that give a channel its signature.",
-    points: ["Brand motion kits", "Kinetic typography", "Podcast intro packages"],
+    title: "Passive Journal",
+    role: "Podcast Producer & Host",
+    period: "2024 — Present",
+    icon: "headphones",
+    description:
+      "Producing and hosting podcast content for one of the country's fastest-growing learning platforms, alongside Khalid Farhan.",
+    points: ["Episode planning & research", "Studio production", "Distribution strategy"],
   },
   {
-    title: "Social Media Management",
-    icon: "share2",
-    description: "Full-funnel content calendars across Facebook, YouTube, Instagram and TikTok.",
-    points: ["Monthly content plan", "Community management", "Analytics reporting"],
+    title: "Axaro",
+    role: "Brand Lead",
+    period: "2025 — Present",
+    icon: "shirt",
+    description:
+      "Leading brand storytelling for the homegrown fashion label he had been a customer of since 2021.",
+    points: ["Brand narrative", "Campaign direction", "Community building"],
   },
   {
-    title: "Scriptwriting",
-    icon: "penline",
-    description: "Hooks, narratives and interview arcs written for spoken delivery, not for reading.",
-    points: ["Podcast question decks", "Ad-read scripting", "Hook libraries"],
+    title: "Lumas Creative",
+    role: "Communication Manager",
+    period: "2026 — Present",
+    icon: "megaphone",
+    description:
+      "Managing communication and brand development for an advertising studio working with leading Bangladeshi brands.",
+    points: ["Client communication", "Brand development", "Content management"],
   },
   {
-    title: "Brand Collaboration",
-    icon: "handshake",
-    description: "Sponsored integrations and campaigns that feel native to the audience.",
-    points: ["Campaign concepting", "Creator partnerships", "Performance recaps"],
+    title: "Speaking & Hosting",
+    role: "Speaker · Host",
+    period: "Ongoing",
+    icon: "presentation",
+    description:
+      "Invited to campuses, youth summits and brand programmes to speak on reading culture, media and building young ventures.",
+    points: ["Campus & summit keynotes", "Event hosting", "Panel moderation"],
   },
 ];
+
 
 export const portfolio = [
   {
